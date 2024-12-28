@@ -1,0 +1,139 @@
+:root {
+  --first_color: #2171b5;
+  --second_color: #6baed6;
+  --third_color: #bdd7e7;
+  --forth_color: #eff3ff;
+}
+
+body {
+  background-color: var(--first_color);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  color: var(--third_color);
+}
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+
+.container .box {
+  margin-top: 20px;
+  line-height: 2;
+  .videos {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .video {
+      cursor: pointer;
+      height: fit-content;
+      margin: 10px;
+      border: 2px dotted var(--forth_color);
+      transition: all 0.5s;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -ms-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      img {
+        width: 100%;
+      }
+      h4 {
+        margin: 10px;
+        color: var(--forth_color);
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .videos {
+    flex-direction: column;
+  }
+  .video {
+    width: 100%;
+  }
+}
+.video:hover {
+  transform: rotate(3deg);
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+}
+
+.container .explain1 {
+  margin-top: 30px;
+  background-color: var(--third_color);
+  padding: 10px;
+  line-height: 2;
+  box-shadow: 1px 1px 10px black;
+  margin-bottom: 20px;
+  h2,
+  h3 {
+    color: var(--first_color);
+    font-size: 18px;
+  }
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+  label {
+    margin: 10px;
+  }
+  input {
+    color: var(--forth_color);
+    background-color: var(--first_color);
+    border: none;
+    outline: none;
+    border-bottom: 1px dotted black;
+    direction: ltr;
+    width: 90%;
+    padding: 5px;
+    height: 25px;
+  }
+  button {
+    margin: 20px auto ;
+    width: 150px;
+    background-color: var(--second_color);
+    padding: 10px;
+    outline: none;
+    border: none;
+    color: var(--forth_color);
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 3px 5px;
+  }
+}
+
+::placeholder {
+  color: white;
+  opacity: 1;
+}
